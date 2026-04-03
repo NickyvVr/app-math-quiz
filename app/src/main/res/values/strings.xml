@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Reken Quiz</string>
+    
+    <!-- Levels -->
+    <string name="level_1">Groep 3 (6-7 jaar)</string>
+    <string name="level_2">Groep 4 (7-8 jaar)</string>
+    <string name="level_3">Groep 5 (8-9 jaar)</string>
+    <string name="level_4">Groep 6 (9-10 jaar)</string>
+    <string name="level_5">Groep 7-8 (10-12 jaar)</string>
+    
+    <!-- Operations -->
+    <string name="add">Optellen</string>
+    <string name="subtract">Aftrekken</string>
+    <string name="multiply">Vermenigvuldigen</string>
+    <string name="divide">Delen</string>
+    
+    <!-- UI Elements -->
+    <string name="streak">Reeks:</string>
+    <string name="best_streak">Best:</string>
+    <string name="question">Vraag</string>
+    <string name="check_answer">Controleer</string>
+    <string name="try_again">Opnieuw proberen</string>
+    <string name="correct">Correct!</string>
+    <string name="incorrect">Fout!</string>
+    <string name="next_question">Volgende vraag</string>
+    <string name="home">Start</string>
+    <string name="select_level">Kies een niveau</string>
+    <string name="select_operation">Kies een bewerking</string>
+</resources>

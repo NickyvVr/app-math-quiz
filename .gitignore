@@ -1,0 +1,45 @@
+# Gradle
+.gradle/
+build/
+*.apk
+*.aab
+
+# Android Studio
+.idea/
+*.iml
+*.iws
+*.ipr
+*.iml
+.DS_Store
+local.properties
+
+# Build files
+.build/
+out/
+
+# Kotlin
+*.kotlin_module
+.kotlinc
+
+# Java
+*.class
+*.jar
+*.war
+*.aar
+*.jmod
+
+# Compiled Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Editor
+*.swp
+*.swo
+*~
+.env
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store
