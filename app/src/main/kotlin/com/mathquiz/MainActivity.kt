@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var preferencesHelper: PreferencesHelper
     private var selectedLevel: Level? = null
     private var selectedOperation: Operation? = null
+    private var selectedLevelButton: Button? = null
+    private var selectedOperationButton: Button? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -55,7 +57,15 @@ class MainActivity : AppCompatActivity() {
                 setPadding(16, 16, 16, 16)
                 textSize = 14f
                 setOnClickListener {
+                    // Reset previous selection
+                    selectedLevelButton?.alpha = 1f
+                    
                     selectedLevel = level
+                    selectedLevelButton = this
+                    
+                    // Visual feedback: dim the button
+                    this.alpha = 0.6f
+                    
                     tryStartQuiz()
                 }
             }
@@ -86,7 +96,15 @@ class MainActivity : AppCompatActivity() {
                 setPadding(16, 16, 16, 16)
                 textSize = 14f
                 setOnClickListener {
+                    // Reset previous selection
+                    selectedOperationButton?.alpha = 1f
+                    
                     selectedOperation = operation
+                    selectedOperationButton = this
+                    
+                    // Visual feedback: dim the button
+                    this.alpha = 0.6f
+                    
                     tryStartQuiz()
                 }
             }

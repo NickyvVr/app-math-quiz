@@ -30,11 +30,21 @@ class QuizActivity : AppCompatActivity() {
         preferencesHelper = PreferencesHelper(this)
         
         // Get level and operation from intent
-        val levelValue = intent.getIntExtra("level", 1)
-        val operationOrdinal = intent.getIntExtra("operation", 0)
+        val levelValue = intent.getIntExtra("level", -1)
+        val operationOrdinal = intent.getIntExtra("operation", -1)
+        
+        if (levelValue < 0 || operationOrdinal < 0) {
+            finish()
+            return
+        }
         
         currentLevel = Level.values().find { it.value == levelValue }
         currentOperation = Operation.values().getOrNull(operationOrdinal)
+
+        if (currentLevel == null || currentOperation == null) {
+            finish()
+            return
+        }
 
         initializeViews()
         setupNumberPad()
@@ -118,11 +128,12 @@ class QuizActivity : AppCompatActivity() {
         answerInput.setText("")
         resultSection.visibility = LinearLayout.GONE
         checkButton.visibility = Button.VISIBLE
+        nextButton.visibility = Button.GONE
         isAnswered = false
     }
 
     private fun checkAnswer() {
-        if (isAnswered) {
+        if (isAnswered || currentQuestion == null) {
             loadNewQuestion()
             return
         }
@@ -149,6 +160,7 @@ class QuizActivity : AppCompatActivity() {
 
         resultSection.visibility = LinearLayout.VISIBLE
         checkButton.visibility = Button.GONE
+        nextButton.visibility = Button.VISIBLE
         isAnswered = true
     }
 }
