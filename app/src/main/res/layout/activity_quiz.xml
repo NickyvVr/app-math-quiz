@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:marginBottom="20dp">
+        android:layout_marginBottom="20dp">
 
         <Button
             android:id="@+id/backButton"
@@ -61,7 +61,7 @@
         android:gravity="center"
         android:background="@drawable/button_background"
         android:padding="24dp"
-        android:marginBottom="20dp">
+        android:layout_marginBottom="20dp">
 
         <TextView
             android:layout_width="wrap_content"

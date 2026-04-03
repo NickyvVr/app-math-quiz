@@ -11,17 +11,17 @@
         android:translateY="54">
         <!-- Vertical line -->
         <rect
-            android:left="-8"
-            android:top="-30"
-            android:right="8"
-            android:bottom="30"
+            android:width="16"
+            android:height="60"
+            android:translateX="-8"
+            android:translateY="-30"
             android:fillColor="@color/white" />
         <!-- Horizontal line -->
         <rect
-            android:left="-30"
-            android:top="-8"
-            android:right="30"
-            android:bottom="8"
+            android:width="60"
+            android:height="16"
+            android:translateX="-30"
+            android:translateY="-8"
             android:fillColor="@color/white" />
     </group>
 </vector>
